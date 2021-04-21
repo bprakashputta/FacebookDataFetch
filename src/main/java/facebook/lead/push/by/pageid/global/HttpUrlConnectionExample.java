@@ -29,8 +29,8 @@ public class HttpUrlConnectionExample {
     }
 
 //    public static void main(String[] args) throws IOException {
-////        String URL = "https://graph.facebook.com/107890267741685?fields=leadgen_forms{id,leads}&access_token=EAACjK6zgswgBAHZBS17gHpZCbuwL9HoYZA7wEpwJ2W8E8CXZCfqOwzIXfaSgmLac9lckTcjKPGxLkXDaxZAY0lRx3ZAtSae9ZAmkwZCQR2z0hVQt8ZArpLmrSQTLb4SFZBKL8PMjVkZCyZBBULPiZBdgBZAS5nWQ4JCYsdYuB8z43J5FTBICVkThPUMwaovwa6QCShfsxcl3HNoZAKX5IC6jf7gAZAQI&after=";
-////        String facebookUrl = "https://graph.facebook.com/107890267741685?fields=leadgen_forms{id,leads}&access_token=EAACjK6zgswgBAHZBS17gHpZCbuwL9HoYZA7wEpwJ2W8E8CXZCfqOwzIXfaSgmLac9lckTcjKPGxLkXDaxZAY0lRx3ZAtSae9ZAmkwZCQR2z0hVQt8ZArpLmrSQTLb4SFZBKL8PMjVkZCyZBBULPiZBdgBZAS5nWQ4JCYsdYuB8z43J5FTBICVkThPUMwaovwa6QCShfsxcl3HNoZAKX5IC6jf7gAZAQI&after=";
+////        String URL = "https://graph.facebook.com/{pageid}?fields=leadgen_forms{id,leads}&access_token={}&after=";
+////        String facebookUrl = "https://graph.facebook.com/{pageid}?fields=leadgen_forms{id,leads}&access_token={}&after=";
 //        System.out.println(sendGet(URL));
 //    }
 }
