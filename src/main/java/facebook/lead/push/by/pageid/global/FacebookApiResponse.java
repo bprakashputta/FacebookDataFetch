@@ -238,13 +238,12 @@ public class FacebookApiResponse{
     public static void main(String[] args) {
         ArrayList<HashMap<String, String>> finalLeadDataList = new ArrayList<HashMap<String, String>>();
         ArrayList<HashMap<String, String>> leadsDataList = new ArrayList<HashMap<String, String>>();
-        String[][] excelData = ReadExcelFileData.getExcelData("/home/putta.prakash/Sokrati/facebook_lead_push_by_pageid/src/main/java/facebook/lead/push/by/pageid/docs/pageid_data.xlsx");
+        String[][] excelData = ReadExcelFileData.getExcelData("~/facebookdatafetch/src/main/java/facebook/lead/push/by/pageid/docs/pageid_data.xlsx");
         String[] pageId = ReadExcelFileData.getPageIdArray(excelData);
 //        for(int i=0; i< pageId.length; i++){
 //            System.out.println(pageId[i]);
 //        }
-//        String[] pageId = {"107890267741685","1938678122885828","501671067014720","679579309083679","721421228220504","292912844650192","1819914298126708","271085653526789","2220650924817075","326767608133324"};
-//        String[] pageId = {"107890267741685"};
+//        String[] pageId = {"3446574535223432"};
 //        HashMap<String, String> pageAccessToken = GetPageAccessToken.getPageAccessTokenFromWebsite(pageId);
         HashMap<String, String> pageAccessToken = GetPageAccessToken.getPageAccessTokenFromSavedFile(pageId);
 //        System.out.println(pageAccessToken);
