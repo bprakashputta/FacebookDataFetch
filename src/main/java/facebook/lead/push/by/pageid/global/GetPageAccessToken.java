@@ -12,7 +12,8 @@ import java.util.HashMap;
 
 public class GetPageAccessToken {
 //    public static String userAccessToken = "";
-    public static String userAccessToken = "EAACjK6zgswgBAFmvlDjzf50ULyoKFRZCTYZApayrM76hhIWMl7UcL9tVwb9gDicZCyfuAr7vtLr8Y87A4shMmH0FNyDot3OS6WQMKWafidLIHae9Xbl0RMgYdZBEsBfj1nJzo5G1O7ZAalSsipZCtPeeNWmwjzgVhLwf8VqaBSfKgmtS8r1IMd";
+//    Get the page Access token from the GraphAPI page on Facebook for Developers
+    public static String userAccessToken = "";
     public static String domainUrl = "https://graph.facebook.com/";
     public static String url;
     public static String fieldsString = "?fields=access_token&access_token=";
@@ -56,7 +57,7 @@ public class GetPageAccessToken {
             String jsonData = objectMapper.writeValueAsString(mapContainingPageData);
             JsonNode tree = objectMapper.readTree(jsonData);
             String formattedJson = objectMapper.writeValueAsString(tree);
-            FileWriter fileWriter = new FileWriter("/home/putta.prakash/Sokrati/facebook_lead_push_by_pageid/src/main/java/facebook/lead/push/by/pageid/docs/pageid_data.json");
+            FileWriter fileWriter = new FileWriter("~/facebookdatafetch/src/main/java/facebook/lead/push/by/pageid/docs/pageid_data.json");
             fileWriter.write(formattedJson);
             fileWriter.close();
         }catch (Exception e){
@@ -67,7 +68,7 @@ public class GetPageAccessToken {
     public static HashMap<String, String> getPageAccessTokenFromSavedFile(String[] pageId) {
         try {
             HashMap<String, String> pageAccessTokensMap = new HashMap<String, String>();
-            BufferedReader reader = new BufferedReader( new FileReader("//home/putta.prakash/Sokrati/facebook_lead_push_by_pageid/src/main/java/facebook/lead/push/by/pageid/docs/pageid_data.json"));
+            BufferedReader reader = new BufferedReader( new FileReader("~/facebookdatafetch/src/main/java/facebook/lead/push/by/pageid/docs/pageid_data.json"));
             StringBuilder stringBuilder = new StringBuilder();
             String line = null;
             String ls = System.getProperty("line.separator");
@@ -107,7 +108,7 @@ public class GetPageAccessToken {
 //        for (String token : pageAccessTokenMapFromSavedFile.keySet()){
 //            System.out.println(token);
 //        }
-        String[][] excelData = ReadExcelFileData.getExcelData("/home/putta.prakash/Sokrati/facebook_lead_push_by_pageid/src/main/java/facebook/lead/push/by/pageid/docs/pageid_data.xlsx");
+        String[][] excelData = ReadExcelFileData.getExcelData("/~/facebookdatafetch/src/main/java/facebook/lead/push/by/pageid/docs/pageid_data.xlsx");
         String[] pageId = ReadExcelFileData.getPageIdArray(excelData);
         String[] somepageID = new String[20];
         for(int i=0;i<somepageID.length; i++){
